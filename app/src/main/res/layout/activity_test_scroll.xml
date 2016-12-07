@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.administrator.on_off_button.ScrollParentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.administrator.on_off_button.TestScrollerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/test"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1050dp"
+                android:text="1111111"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="22222222"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1050dp"
+                android:text="333333333333"/>
+        </LinearLayout>
+    </com.example.administrator.on_off_button.TestScrollerView>
+</com.example.administrator.on_off_button.ScrollParentLinearLayout>

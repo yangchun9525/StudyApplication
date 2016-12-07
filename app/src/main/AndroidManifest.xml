@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.on_off_button" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.Mp3Activity"/>
+        <activity android:name=".activity.ViewGroupActivity"/>
+        <activity android:name=".activity.MatrixActivity"/>
+        <activity android:name=".activity.TestViewDragViewGroupActivity"/>
+        <activity android:name=".activity.BitmapShaderActivity"/>
+        <activity android:name=".activity.FiveCircleActivity"/>
+        <activity android:name=".activity.FlipBookActivity"/>
+        <activity android:name=".activity.MoreActivity"/>
+        <activity android:name=".activity.ImageMatrixActivity"/>
+        <activity android:name=".activity.ImageEffectActivity"/>
+        <activity android:name=".activity.ImageColorMatrixActivity"/>
+        <activity android:name=".activity.ImagePixerActivity"/>
+        <activity android:name=".activity.SurfaceViewTemplateActivity"/>
+        <activity android:name=".activity.RecycleActivity"/>
+        <activity android:name=".activity.StaggeredGridLayoutActivity"/>
+        <activity android:name=".handler.Handler_01_Activity"/>
+        <activity android:name=".handler.Handler_02_Activity"/>
+        <activity android:name=".handler.Handler_03_Activity"/>
+        <activity android:name=".handler.Handler_04_Activity"/>
+        <activity android:name=".handler.Handler_05_Activity"/>
+        <activity android:name=".activity.ValueAnmiationActivity"/>
+        <activity android:name=".activity.MukeImageViewActivity"/>
+        <activity android:name=".activity.TestScrollActivity"/>
+        <activity android:name=".activity.LayoutAnimaActivity"/>
+        <activity android:name=".activity.PendingTransitionFirstActivity"/>
+        <activity android:name=".activity.PendingTransitionSecondActivity"/>
+        <activity android:name=".activity.TestCoordinatorActivity" android:theme="@style/AppTheme"/>
+        <service
+            android:name=".AudioService" />
+    </application>
+
+</manifest>

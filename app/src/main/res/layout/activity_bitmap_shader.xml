@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.administrator.on_off_button.BitmapShaderView
+        android:id="@+id/shaderView"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp" />
+
+    <com.example.administrator.on_off_button.ReflectView
+        android:layout_below="@id/shaderView"
+        android:id="@+id/ReflectView"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp" />
+
+    <com.example.administrator.on_off_button.MeshView
+        android:layout_below="@id/ReflectView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+</RelativeLayout>

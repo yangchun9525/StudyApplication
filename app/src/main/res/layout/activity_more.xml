@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <Button
+            android:textAllCaps="false"
+            android:text="FiveCircle"
+            android:onClick="toFiveCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textAllCaps="false"
+            android:text="ImageMatrix"
+            android:onClick="toImageMatrix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textAllCaps="false"
+            android:text="ImageEffect"
+            android:onClick="toImageEffect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textAllCaps="false"
+            android:text="ImageColorMatrix"
+            android:onClick="toImageColorMatrix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textAllCaps="false"
+            android:text="ImagePixerMatrix"
+            android:onClick="toImagePixerMatrix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textAllCaps="false"
+            android:text="SurfaceView"
+            android:onClick="toSurfaceView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textAllCaps="false"
+            android:text="RecycleActivity"
+            android:onClick="toRecycleActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textAllCaps="false"
+            android:text="Handler01Activity"
+            android:onClick="toHandler01Activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textAllCaps="false"
+            android:text="Handler02Activity"
+            android:onClick="toHandler02Activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textAllCaps="false"
+            android:text="Handler03Activity"
+            android:onClick="toHandler03Activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textAllCaps="false"
+            android:text="Handler04Activity"
+            android:onClick="toHandler04Activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textAllCaps="false"
+            android:text="Handler05Activity"
+            android:onClick="toHandler05Activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textAllCaps="false"
+            android:text="ViewAnimation"
+            android:onClick="toViewAnimationActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <Button
+            android:text="慕课图片"
+            android:onClick="toMukeImageViewActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="下拉滑动"
+            android:onClick="toTestScrollActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="LayoutAnima"
+            android:textAllCaps="false"
+            android:onClick="toLayoutAnimaActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="5.0过渡动画"
+            android:textAllCaps="false"
+            android:onClick="toPendingTransitionFirstActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="CoordinatorLayout"
+            android:textAllCaps="false"
+            android:onClick="toTestCoordinatorActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
