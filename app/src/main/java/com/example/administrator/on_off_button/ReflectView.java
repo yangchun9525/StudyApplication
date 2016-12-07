@@ -16,7 +16,7 @@ import android.view.View;
 /**
  * Created by Administrator on 2016/2/21.
  *
- * Reflect:µ¹Ó°
+ * Reflect:å€’å½±
  */
 public class ReflectView extends View {
     private Bitmap mSrcBitmap;
@@ -39,11 +39,11 @@ public class ReflectView extends View {
     private void initView(){
         mSrcBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.test);
         mPaint = new Paint();
-        //0XDD000000,0X10000000,ÕâÊÇµ¹Ó°Ğ§¹û£¬½«ÑÕÉ«¸ÄÎªÍ¸Ã÷¶È
+        //0XDD000000,0X10000000,è¿™æ˜¯å€’å½±æ•ˆæœï¼Œå°†é¢œè‰²æ”¹ä¸ºé€æ˜åº¦
         mPaint.setShader(new LinearGradient(0,mSrcBitmap.getHeight(),0,mSrcBitmap.getHeight()*1.4F, 0XDD000000,0X10000000, Shader.TileMode.CLAMP));
         mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));
         Matrix matrix = new Matrix();
-        matrix.setScale(1,-1);//xÖá¶Ô³Æ
+        matrix.setScale(1,-1);//xè½´å¯¹ç§°
         mReflectBitmap = Bitmap.createBitmap(mSrcBitmap,0,0,mSrcBitmap.getWidth(),mSrcBitmap.getHeight(),matrix,true);
     }
 

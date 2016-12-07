@@ -48,11 +48,11 @@ public class ValueAnmiationActivity extends Activity{
     }
 
     public void animatorXML(View view) {
-        // ¼ÓÔØ¶¯»­
+        // åŠ è½½åŠ¨ç”»
         Animator anim = AnimatorInflater.loadAnimator(this, R.animator.scale);
         imageView.setPivotX(0);
         imageView.setPivotY(0);
-        //ÏÔÊ¾µÄµ÷ÓÃinvalidate
+        //æ˜¾ç¤ºçš„è°ƒç”¨invalidate
         imageView.invalidate();
         anim.setTarget(imageView);
         anim.start();
@@ -62,7 +62,7 @@ public class ValueAnmiationActivity extends Activity{
         final ValueAnimator animator = ValueAnimator.ofFloat(0, screenHeight
                 - imageView.getHeight());
         animator.setTarget(view);
-        //·´µ¯²å²¹Æ÷£¬·´µ¯Ğ§¹û
+        //åå¼¹æ’è¡¥å™¨ï¼Œåå¼¹æ•ˆæœ
         animator.setInterpolator(new BounceInterpolator());
         animator.setDuration(1000).start();
         animator.addUpdateListener(new AnimatorUpdateListener() {
@@ -122,7 +122,7 @@ public class ValueAnmiationActivity extends Activity{
         }, 0);
 //        ValueAnimator animator = ValueAnimator.ofObject(
 //                new TypeEvaluator<PointF>() {
-//                    //evaluateÆÀ¼Û,ÀàËÆÓÚObjectAnimator£¬p.y Å×ÎïÏßµÄyÖáÔËĞĞ¹ì¼£
+//                    //evaluateè¯„ä»·,ç±»ä¼¼äºObjectAnimatorï¼Œp.y æŠ›ç‰©çº¿çš„yè½´è¿è¡Œè½¨è¿¹
 //                    @Override
 //                    public PointF evaluate(float fraction, PointF arg1,
 //                                           PointF arg2) {

@@ -29,7 +29,7 @@ public class StaggeredGridLayoutActivity extends ActionBarActivity {
 
         mRecycleView.setLayoutManager(new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL));
 
-        //设置recycleView的分割线
+        //璁剧疆recycleView鐨勫垎鍓茬嚎
 //        mRecycleView.addItemDecoration(new DividerItemDecoration(this,LinearLayoutManager.VERTICAL));
     }
 

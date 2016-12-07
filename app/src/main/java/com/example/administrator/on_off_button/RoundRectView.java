@@ -31,7 +31,7 @@ public class RoundRectView extends View {
 		init();
 	}
 	private void init() {
-		setLayerType(LAYER_TYPE_SOFTWARE, null);//½ûÖ¹Ê¹ÓÃÓ²¼ş¼ÓËÙ
+		setLayerType(LAYER_TYPE_SOFTWARE, null);//ç¦æ­¢ä½¿ç”¨ç¡¬ä»¶åŠ é€Ÿ
 		bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.test);
 		mOut = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), Bitmap.Config.ARGB_8888);
 		Canvas canvas = new Canvas(mOut);

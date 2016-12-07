@@ -41,7 +41,7 @@ public class ImageMatrixView extends View{
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawBitmap(mBitmip, 0, 0, null);//ԭͼ
-        canvas.drawBitmap(mBitmip, mMatrix, null);//�Ա�ͼ
+        canvas.drawBitmap(mBitmip, 0, 0, null);//原图
+        canvas.drawBitmap(mBitmip, mMatrix, null);//锟皆憋拷图
     }
 }

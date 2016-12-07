@@ -9,17 +9,17 @@ import android.view.View;
 
 /**
  * Created by Administrator on 2016/2/21.
- * mesh:Íø¸ñ
+ * mesh:ç½‘æ ¼
  */
 public class MeshView extends View {
-    //WIDTH£¬HEIGHT±íÊ¾·Ö³ÉºáÊúÍø¸ñµÄ¸ñÊ½¸öÊı
+    //WIDTHï¼ŒHEIGHTè¡¨ç¤ºåˆ†æˆæ¨ªç«–ç½‘æ ¼çš„æ ¼å¼ä¸ªæ•°
     private int WIDTH = 20;
     private int HEIGHT = 200;
-    //ËùÓĞ×ø±êµãµÄ¸öÊı
+    //æ‰€æœ‰åæ ‡ç‚¹çš„ä¸ªæ•°
     private int count = (WIDTH + 1)*(HEIGHT + 1);
-    //¼ÇÂ¼ËùÓĞµãµÄ×ø±ê,{x0,y0,x1,y1,x2,y2......}
+    //è®°å½•æ‰€æœ‰ç‚¹çš„åæ ‡,{x0,y0,x1,y1,x2,y2......}
     private float[] verts = new float[count * 2];
-    //¼ÇÂ¼ËùÓĞµãµÄÔ­Ê¼µÄ×ø±êĞÅÏ¢,{x0,y0,x1,y1,x2,y2......}
+    //è®°å½•æ‰€æœ‰ç‚¹çš„åŸå§‹çš„åæ ‡ä¿¡æ¯,{x0,y0,x1,y1,x2,y2......}
     private float[] origs = new float[count * 2];
     private Bitmap mBitmap;
     private float k = 0.1f;
@@ -60,14 +60,14 @@ public class MeshView extends View {
     protected void onDraw(Canvas canvas) {
         for (int i = 0;i<HEIGHT + 1;i++){
             for (int j = 0;j<WIDTH +1 ;j++){
-                //ËùÓĞX×ø±ê
+                //æ‰€æœ‰Xåæ ‡
                 verts[2 * (i*(WIDTH + 1) + j) + 0] += 0;
                 float offsetY = (float)Math.sin((float)j/WIDTH * 2 *Math.PI + k * 2 * Math.PI);
                 verts[2 * (i*(WIDTH + 1) + j) + 1] = origs[2 * (i*(WIDTH + 1) + j) + 1] + 50 * offsetY;
             }
         }
         k += 0.01F;
-        //0±íÊ¾vertp[]½øĞĞÆ«ÒÆ
+        //0è¡¨ç¤ºvertp[]è¿›è¡Œåç§»
         canvas.drawBitmapMesh(mBitmap,WIDTH,HEIGHT,verts,0,null,0,null);
         invalidate();
     }

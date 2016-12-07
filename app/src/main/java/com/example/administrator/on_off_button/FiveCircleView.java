@@ -32,7 +32,7 @@ public class FiveCircleView extends View{
         paint = new Paint();
         paint.setAntiAlias(true);
         paint.setColor(Color.RED);
-        //得到屏幕的高度和宽度
+        //寰楀埌灞忓箷鐨勯珮搴﹀拰瀹藉害
         WindowManager wm = (WindowManager) getContext()
                 .getSystemService(Context.WINDOW_SERVICE);
 

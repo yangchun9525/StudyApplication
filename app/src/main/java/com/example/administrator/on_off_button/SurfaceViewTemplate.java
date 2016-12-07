@@ -5,21 +5,19 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.support.v4.widget.ViewDragHelper;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
 /**
  * Created by Administrator on 2016/2/28.
- * SurfaceViewÍ¨¹ıÆôÓÃÒ»¸ö×ÓÏß³ÌÀ´½øĞĞ»­ÃæµÄ»æÖÆ
+ * SurfaceViewé€šè¿‡å¯ç”¨ä¸€ä¸ªå­çº¿ç¨‹æ¥è¿›è¡Œç”»é¢çš„ç»˜åˆ¶
  */
 public class SurfaceViewTemplate extends SurfaceView implements SurfaceHolder.Callback,Runnable{
     private SurfaceHolder mHolder;
     private Canvas mCanvas;
-    //×ÓÏß³Ì±êÖ¾
+    //å­çº¿ç¨‹æ ‡å¿—
     private boolean isDrawing;
     private int x,y;
     private Path mPath;
@@ -72,8 +70,8 @@ public class SurfaceViewTemplate extends SurfaceView implements SurfaceHolder.Ca
     private void draw() {
         try {
             /*
-                »ñµÃµ±Ç°canvas»æÍ¼¶ÔÏó£¬»ñÈ¡µ½µÄcanvas¶ÔÏó»¹ÊÇ¼ÌĞøÉÏ´ÎµÄcanvas¶ÔÏó£¬¶ø²»ÊÇÒ»¸öĞÂµÄ
-                ¶ÔÏó£¬Òò´Ë£¬Ö®Ç°µÄ»æÖÆ²Ù×÷¶¼½«±»±£Áô£¬ÈçĞè²Á³ı£¬Ôò¿ÉÒÔÔÚ»æÖÆÇ°,Í¨¹ıdrawColor()·½·¨½øĞĞÇåÆÁ
+                è·å¾—å½“å‰canvasç»˜å›¾å¯¹è±¡ï¼Œè·å–åˆ°çš„canvaså¯¹è±¡è¿˜æ˜¯ç»§ç»­ä¸Šæ¬¡çš„canvaså¯¹è±¡ï¼Œè€Œä¸æ˜¯ä¸€ä¸ªæ–°çš„
+                å¯¹è±¡ï¼Œå› æ­¤ï¼Œä¹‹å‰çš„ç»˜åˆ¶æ“ä½œéƒ½å°†è¢«ä¿ç•™ï¼Œå¦‚éœ€æ“¦é™¤ï¼Œåˆ™å¯ä»¥åœ¨ç»˜åˆ¶å‰,é€šè¿‡drawColor()æ–¹æ³•è¿›è¡Œæ¸…å±
              */
             mCanvas = mHolder.lockCanvas();
             mCanvas.drawColor(Color.WHITE);
@@ -83,7 +81,7 @@ public class SurfaceViewTemplate extends SurfaceView implements SurfaceHolder.Ca
             e.printStackTrace();
         }finally {
             if(mCanvas != null){
-                //Í¨¹ı´ËunlockCanvasAndPost·½·¨½«»­²¼ÄÚÈİ½øĞĞÌá½»
+                //é€šè¿‡æ­¤unlockCanvasAndPostæ–¹æ³•å°†ç”»å¸ƒå†…å®¹è¿›è¡Œæäº¤
                 mHolder.unlockCanvasAndPost(mCanvas);
             }
         }

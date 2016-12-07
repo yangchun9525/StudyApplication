@@ -19,9 +19,9 @@ public class TestMatrixImageView extends ImageView{
     @Override
     protected void onDraw(Canvas canvas) {
         System.out.println("---> onDraw");
-        //»­Ô­Í¼
+        //ç”»åŸå›¾
         canvas.drawBitmap(mBitmap, 0, 0, null);
-        //»­¾­¹ıMatrix±ä»¯ºóµÄÍ¼
+        //ç”»ç»è¿‡Matrixå˜åŒ–åçš„å›¾
         canvas.drawBitmap(mBitmap, mMatrix, null);
         super.onDraw(canvas);
     }

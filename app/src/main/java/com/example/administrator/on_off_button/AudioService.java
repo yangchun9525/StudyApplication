@@ -22,14 +22,14 @@ public class AudioService extends Service implements MediaPlayer.OnCompletionLis
         return binder;
     }
     /**
-     * µ±Audio²¥·ÅÍêµÄÊ±ºò´¥·¢¸Ã¶¯×÷
+     * å½“Audioæ’­æ”¾å®Œçš„æ—¶å€™è§¦å‘è¯¥åŠ¨ä½œ
      */
     @Override
     public void onCompletion(MediaPlayer player) {
-        stopSelf();//½áÊøÁË£¬Ôò½áÊøService
+        stopSelf();//ç»“æŸäº†ï¼Œåˆ™ç»“æŸService
     }
 
-    //ÔÚÕâÀïÎÒÃÇÐèÒªÊµÀý»¯MediaPlayer¶ÔÏó
+    //åœ¨è¿™é‡Œæˆ‘ä»¬éœ€è¦å®žä¾‹åŒ–MediaPlayerå¯¹è±¡
     public void onCreate(){
         super.onCreate();
         player = new MediaPlayer();
@@ -42,13 +42,13 @@ public class AudioService extends Service implements MediaPlayer.OnCompletionLis
             e.printStackTrace();
         }
 
-        //ÎÒÃÇ´ÓrawÎÄ¼þ¼ÐÖÐ»ñÈ¡Ò»¸öÓ¦ÓÃ×Ô´øµÄmp3ÎÄ¼þ
+        //æˆ‘ä»¬ä»Žrawæ–‡ä»¶å¤¹ä¸­èŽ·å–ä¸€ä¸ªåº”ç”¨è‡ªå¸¦çš„mp3æ–‡ä»¶
 //        player = MediaPlayer.create(this, R.raw.yicijiuhao);
 //        player.setOnCompletionListener(this);
     }
 
     /**
-     * ¸Ã·½·¨ÔÚSDK2.0²Å¿ªÊ¼ÓÐµÄ£¬Ìæ´úÔ­À´µÄonStart·½·¨
+     * è¯¥æ–¹æ³•åœ¨SDK2.0æ‰å¼€å§‹æœ‰çš„ï¼Œæ›¿ä»£åŽŸæ¥çš„onStartæ–¹æ³•
      */
     public int onStartCommand(Intent intent, int flags, int startId){
         if(!player.isPlaying()){
@@ -65,16 +65,16 @@ public class AudioService extends Service implements MediaPlayer.OnCompletionLis
         player.release();
     }
 
-    //ÎªÁËºÍActivity½»»¥£¬ÎÒÃÇÐèÒª¶¨ÒåÒ»¸öBinder¶ÔÏó
+    //ä¸ºäº†å’ŒActivityäº¤äº’ï¼Œæˆ‘ä»¬éœ€è¦å®šä¹‰ä¸€ä¸ªBinderå¯¹è±¡
     public class AudioBinder extends Binder{
 
-        //·µ»ØService¶ÔÏó
+        //è¿”å›žServiceå¯¹è±¡
         public AudioService getService(){
             return AudioService.this;
         }
     }
 
-    //ºóÍË²¥·Å½ø¶È
+    //åŽé€€æ’­æ”¾è¿›åº¦
     public void haveFun(){
 //        if(player.isPlaying() && player.getCurrentPosition()>2500){
 //            player.seekTo(player.getCurrentPosition()-2500);

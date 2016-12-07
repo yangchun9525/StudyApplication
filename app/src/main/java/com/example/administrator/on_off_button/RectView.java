@@ -58,17 +58,17 @@ public class RectView extends View{
         mRectHeight = getMeasuredHeight();
         mRectWidth = (int)(width*0.6 / count);
         /**
-         * // ����LinearGradient�����ý�����ɫ����
-         // ��һ��,�ڶ���������ʾ������� ������������յ��ڶԽǵ�����λ��
-         // ������,���ĸ�������ʾ�����յ�
-         // �����������ʾ������ɫ
-         // ��������������Ϊ��,��ʾ����,ֵΪ0-1 new float[] {0.25f, 0.5f, 0.75f, 1 }
-         // ������ǿյģ���ɫ���ȷֲ������ݶ��ߡ�
-         // ���߸���ʾƽ�̷�ʽ
-         // CLAMP�ظ����һ����ɫ�����,���������һ�����ص�
-         // MIRROR�ظ���ɫ��ͼ��ˮƽ��ֱ�����Ѿ���ʽ�����з�תЧ��
-         // REPEAT�ظ���ɫ��ͼ��ˮƽ��ֱ����
-         ������Ⱦ1,2��ʾԲ�ģ�3��ʾ�뾶��4��5��6������һ��
+         * // 创建LinearGradient并设置渐变颜色数组
+         // 第一个,第二个参数表示渐变起点 可以设置起点终点在对角等任意位置
+         // 第三个,第四个参数表示渐变终点
+         // 第五个参数表示渐变颜色
+         // 第六个参数可以为空,表示坐标,值为0-1 new float[] {0.25f, 0.5f, 0.75f, 1 }
+         // 如果这是空的，颜色均匀分布，沿梯度线。
+         // 第七个表示平铺方式
+         // CLAMP重复最后一个颜色至最后,即拉伸最后一个像素点
+         // MIRROR重复着色的图像水平或垂直方向已镜像方式填充会有翻转效果
+         // REPEAT重复着色的图像水平或垂直方向
+         环形渲染1,2表示圆心，3表示半径，4，5，6和线性一样
          new RadialGradient();
          new LinearGradient(0 ,0, mViewWidth, 0, new int[]{Color.BLUE, Color.RED, Color.BLACK}, null, Shader.TileMode.CLAMP)
          */

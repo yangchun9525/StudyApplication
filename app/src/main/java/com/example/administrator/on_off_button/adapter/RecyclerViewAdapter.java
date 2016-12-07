@@ -56,7 +56,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<MyViewHolder>{
             myViewHolder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
-                    //»ñÈ¡ÔÚÆÁÄ»ÉÏµÄÊµ¼ÊÎ»ÖÃ
+                    //è·å–åœ¨å±å¹•ä¸Šçš„å®é™…ä½ç½®
                     int layoutPostion = myViewHolder.getLayoutPosition();
                     mOnItemClickListener.onLongItemClick(myViewHolder.itemView, layoutPostion);
                     return false;
@@ -79,7 +79,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<MyViewHolder>{
         data.remove(position);
 //        notifyItemInserted(position);
         notifyItemRemoved(position);
-        //notifyDataSetChangedÎŞ¶¯»­Ğ§¹û
+        //notifyDataSetChangedæ— åŠ¨ç”»æ•ˆæœ
 //        notifyDataSetChanged();
     }
 }

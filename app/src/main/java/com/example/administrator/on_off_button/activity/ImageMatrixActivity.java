@@ -56,7 +56,7 @@ public class ImageMatrixActivity extends Activity{
         matrix.setValues(mMarArray);
 //    	matrix.setTranslate(150, 150);
 //    	matrix.setScale(2, 2);
-//    	matrix.postTranslate(200, 200);//顺序显示，使用post方法
+//    	matrix.postTranslate(200, 200);//椤哄簭鏄剧ず锛屼娇鐢╬ost鏂规硶
         imageMatrixView.setImageMatrix(matrix);
     }
 
