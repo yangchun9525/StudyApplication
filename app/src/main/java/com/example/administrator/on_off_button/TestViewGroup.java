@@ -1,14 +1,12 @@
 package com.example.administrator.on_off_button;
 
 import android.content.Context;
-import android.support.v4.widget.ViewDragHelper;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.ScrollView;
 import android.widget.Scroller;
 
 /**
@@ -72,6 +70,7 @@ public class TestViewGroup extends ViewGroup{
         }
     }
 
+    int clickChild = 0;
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         int y = (int) ev.getY();
@@ -107,13 +106,23 @@ public class TestViewGroup extends ViewGroup{
                         //startScroll是最后移动到什么位置，之后会触发computeScroll方法，来达到移动的效果
                         mScroller.startScroll(0, getScrollY(), 0,  -dScrollY);
                     }else {
-                        mScroller.startScroll(0, getScrollY(), 0,  height -dScrollY);
+                        if(clickChild == 0) {
+                            clickChild ++;
+                            mScroller.startScroll(0, getScrollY(), 0, height - dScrollY);
+                        }else {
+                            mScroller.startScroll(0, getScrollY(), 0,  -dScrollY);
+                        }
                     }
                 }else {
                     if(-dScrollY < height/3){
                         mScroller.startScroll(0, getScrollY(), 0,  -dScrollY);
                     }else {
-                        mScroller.startScroll(0, getScrollY(), 0,  -height -dScrollY);
+                        if(clickChild != 0) {
+                            clickChild --;
+                            mScroller.startScroll(0, getScrollY(), 0, -height - dScrollY);
+                        }else {
+                            mScroller.startScroll(0, getScrollY(), 0,  -dScrollY);
+                        }
                     }
                 }
                 Log.i("test","ACTION_UP");

@@ -13,6 +13,7 @@
 
         <ImageView
             android:layout_below="@id/img1"
+            android:id="@+id/img2"
             android:scaleType="fitXY"
             android:src="@drawable/switch_background"
             android:layout_width="match_parent"
