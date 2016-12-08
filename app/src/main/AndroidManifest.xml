@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.administrator.on_off_button" >
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -42,7 +44,9 @@
         <activity android:name=".activity.LayoutAnimaActivity"/>
         <activity android:name=".activity.PendingTransitionFirstActivity"/>
         <activity android:name=".activity.PendingTransitionSecondActivity"/>
+        <activity android:name=".activity.NotifyActivity"/>
         <activity android:name=".activity.TestCoordinatorActivity" android:theme="@style/AppTheme"/>
+        <activity android:name=".activity.VectorAnimationActivity"/>
         <service
             android:name=".AudioService" />
     </application>

@@ -34,12 +34,12 @@ public class RecycleActivity extends ActionBarActivity implements RecyclerViewAd
         initData();
         mAdapter = new RecyclerViewAdapter(this,mData);
         mRecycleView.setAdapter(mAdapter);
-        //设置为listview还是gridview,设置recycleView的布局管理
+        //璁剧疆涓簂istview杩樻槸gridview,璁剧疆recycleView鐨勫竷灞�绠＄悊
         LinearLayoutManager linearManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         mRecycleView.setLayoutManager(linearManager);
         mRecycleView.setItemAnimator(new DefaultItemAnimator());
         mAdapter.setOnItemClickListener(this);
-        //设置recycleView的分割线
+        //璁剧疆recycleView鐨勫垎鍓茬嚎
 //        mRecycleView.addItemDecoration(new DividerItemDecoration(this,LinearLayoutManager.VERTICAL));
     }
 

@@ -5,9 +5,6 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Binder;
 import android.os.IBinder;
-import android.util.Log;
-
-import java.io.IOException;
 
 /**
  * Created by Administrator on 2016/1/6.
@@ -33,18 +30,19 @@ public class AudioService extends Service implements MediaPlayer.OnCompletionLis
     public void onCreate(){
         super.onCreate();
         player = new MediaPlayer();
-        try {
-            player.setDataSource("/storage/sdcard0/2345/4.mp3");
-            player.prepare();
-            player.setOnCompletionListener(this);
-        } catch (IOException e) {
-            Log.i("exception",e+"");
-            e.printStackTrace();
-        }
+//        try {
+//            player.setDataSource("/storage/sdcard0/2345/4.mp3");
+//            player.prepare();
+//            player.setOnCompletionListener(this);
+//        } catch (IOException e) {
+//            Log.i("exception",e+"");
+//            e.printStackTrace();
+//        }
 
         //我们从raw文件夹中获取一个应用自带的mp3文件
 //        player = MediaPlayer.create(this, R.raw.yicijiuhao);
 //        player.setOnCompletionListener(this);
+//        player.start();
     }
 
     /**

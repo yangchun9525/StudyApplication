@@ -76,4 +76,10 @@ public class MoreActivity extends Activity{
     public void toTestCoordinatorActivity(View view){
         startActivity(new Intent(MoreActivity.this,TestCoordinatorActivity.class));
     }
+    public void toNotifyActivity(View view){
+        startActivity(new Intent(MoreActivity.this,NotifyActivity.class));
+    }
+    public void toVectorAnimationActivity(View view){
+        startActivity(new Intent(MoreActivity.this,VectorAnimationActivity.class));
+    }
 }

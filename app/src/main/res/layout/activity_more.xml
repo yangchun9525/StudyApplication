@@ -123,5 +123,19 @@
             android:onClick="toTestCoordinatorActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
+        <Button
+            android:text="5.0通知"
+            android:textAllCaps="false"
+            android:onClick="toNotifyActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Vector动画"
+            android:textAllCaps="false"
+            android:onClick="toVectorAnimationActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </LinearLayout>

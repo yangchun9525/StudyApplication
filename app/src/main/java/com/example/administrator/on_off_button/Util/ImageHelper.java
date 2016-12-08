@@ -11,28 +11,28 @@ import android.graphics.Paint;
  * Created by Administrator on 2016/2/24.
  */
 public class ImageHelper {
-    /**Èı¸ö²ÎÊı·Ö±ğÎªÉ«Ïà£¬±¥ºÍ¶È£¬ÁÁ¶È
-     * É«ÏàÎªÀ¶É«¸üÀ¶£¬ºìÉ«¸üºì
-     * ±¥ºÍ¶È£¬ÑÕÉ«µÄ´¿¶È£¬´Ó0£¨»Ò£©µ½100%£¨±¥ºÍ£©
-     * ÁÁ¶È£ºÑÕÉ«µÄÏà¶ÔÃ÷°µ³Ì¶È
+    /**ä¸‰ä¸ªå‚æ•°åˆ†åˆ«ä¸ºè‰²ç›¸ï¼Œé¥±å’Œåº¦ï¼Œäº®åº¦
+     * è‰²ç›¸ä¸ºè“è‰²æ›´è“ï¼Œçº¢è‰²æ›´çº¢
+     * é¥±å’Œåº¦ï¼Œé¢œè‰²çš„çº¯åº¦ï¼Œä»0ï¼ˆç°ï¼‰åˆ°100%ï¼ˆé¥±å’Œï¼‰
+     * äº®åº¦ï¼šé¢œè‰²çš„ç›¸å¯¹æ˜æš—ç¨‹åº¦
      * */
     public static Bitmap handleImageEffect(Bitmap bm,float hue,float saturation,float lum){
         Bitmap bmp = Bitmap.createBitmap(bm.getWidth(),bm.getHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bmp);
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        //ÉèÖÃÉ«Ïà
+        //è®¾ç½®è‰²ç›¸
         ColorMatrix hueMatrix = new ColorMatrix();
         //0</code> correspond to a rotation around the RED color
         hueMatrix.setRotate(0, hue);
         hueMatrix.setRotate(1, hue);
         hueMatrix.setRotate(2, hue);
-        //ÉèÖÃ±¥ºÍ¶È
+        //è®¾ç½®é¥±å’Œåº¦
         ColorMatrix saturationMatrix = new ColorMatrix();
         saturationMatrix.setSaturation(saturation);
-        //ÉèÖÃÁÁ¶È
+        //è®¾ç½®äº®åº¦
         ColorMatrix lumMatrix = new ColorMatrix();
         lumMatrix.setScale(lum,lum,lum,1);
-        //Ö´ĞĞ
+        //æ‰§è¡Œ
         ColorMatrix imageMatrix = new ColorMatrix();
         imageMatrix.postConcat(hueMatrix);
         imageMatrix.postConcat(saturationMatrix);
@@ -43,19 +43,19 @@ public class ImageHelper {
         return bmp;
     }
     /**
-     * ÓÃÓÚ´´½¨µ×Æ¬Ğ§¹ûÌØĞ§
+     * ç”¨äºåˆ›å»ºåº•ç‰‡æ•ˆæœç‰¹æ•ˆ
      */
     public static Bitmap handleImageNegative(Bitmap bm) {
-        //bm.getWidth ·µ»ØµÄ¾ÍÊÇbmµÄÏñËØµã
+        //bm.getWidth è¿”å›çš„å°±æ˜¯bmçš„åƒç´ ç‚¹
         int width = bm.getWidth();
         int height = bm.getHeight();
         int color;
-        //ÓÃÓÚ±£´æµ±Ç°ÏñËØµãµÄr,g,b,a·ÖÁ¿
+        //ç”¨äºä¿å­˜å½“å‰åƒç´ ç‚¹çš„r,g,b,aåˆ†é‡
         int r, g, b, a;
 
         Bitmap bmp = Bitmap.createBitmap(width, height
                 , Bitmap.Config.ARGB_8888);
-        //±£´æÏñËØµãÊı×éµ½Í¼Ïñ
+        //ä¿å­˜åƒç´ ç‚¹æ•°ç»„åˆ°å›¾åƒ
         int[] oldPx = new int[width * height];
         int[] newPx = new int[width * height];
         bm.getPixels(oldPx, 0, width, 0, 0, width, height);
@@ -92,7 +92,7 @@ public class ImageHelper {
         return bmp;
     }
     /**
-     * ÓÃÓÚ´´½¨ÀÏÕÕÆ¬Ğ§¹ûÌØĞ§
+     * ç”¨äºåˆ›å»ºè€ç…§ç‰‡æ•ˆæœç‰¹æ•ˆ
      */
     public static Bitmap handleImagePixelsOldPhoto(Bitmap bm) {
         Bitmap bmp = Bitmap.createBitmap(bm.getWidth(), bm.getHeight(),
@@ -133,7 +133,7 @@ public class ImageHelper {
         return bmp;
     }
     /**
-     * ÓÃÓÚ´´½¨¸¡µñĞ§¹ûÌØĞ§
+     * ç”¨äºåˆ›å»ºæµ®é›•æ•ˆæœç‰¹æ•ˆ
      */
     public static Bitmap handleImagePixelsRelief(Bitmap bm) {
         Bitmap bmp = Bitmap.createBitmap(bm.getWidth(), bm.getHeight(),

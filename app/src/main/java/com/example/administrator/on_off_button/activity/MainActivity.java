@@ -75,7 +75,7 @@ public class MainActivity extends Activity implements TopBar.TopBaiClickInterfac
 
 
         intent.setClass(this, AudioService.class);
-        startService(intent);
+//        startService(intent);
         bindService(intent, conn, Context.BIND_AUTO_CREATE);
     }
 
@@ -120,7 +120,7 @@ public class MainActivity extends Activity implements TopBar.TopBaiClickInterfac
     protected void onDestroy() {
         super.onDestroy();
         unbindService(conn);
-        stopService(intent);
+//        stopService(intent);
         if (mMediaPlayer != null) {
             mMediaPlayer.stop();
             mMediaPlayer.reset();

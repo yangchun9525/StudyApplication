@@ -3,9 +3,7 @@ package com.example.administrator.on_off_button.activity;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.Image;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 
@@ -20,6 +18,7 @@ public class ImageEffectActivity extends Activity implements SeekBar.OnSeekBarCh
     private SeekBar mSeekbarhue,mSeekbarSaturation, mSeekbarLum;
     private static int MAX_VALUE = 255;
     private static int MID_VALUE = 127;
+    //色调，饱和度，亮度
     private float mHue,mStauration, mLum;
     private Bitmap bitmap;
 

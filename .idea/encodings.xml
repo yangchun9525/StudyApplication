@@ -10,7 +10,9 @@
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/on_off_button/RoundRectView.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/on_off_button/SurfaceViewTemplate.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/on_off_button/TestMatrixImageView.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/on_off_button/Util/ImageHelper.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/on_off_button/activity/ImageMatrixActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/on_off_button/activity/RecycleActivity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/on_off_button/activity/StaggeredGridLayoutActivity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/on_off_button/activity/ValueAnmiationActivity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/administrator/on_off_button/adapter/RecyclerViewAdapter.java" charset="UTF-8" />
