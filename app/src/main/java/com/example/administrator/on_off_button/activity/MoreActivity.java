@@ -82,4 +82,8 @@ public class MoreActivity extends Activity{
     public void toVectorAnimationActivity(View view){
         startActivity(new Intent(MoreActivity.this,VectorAnimationActivity.class));
     }
+
+    public void toTestViewDragViewGroupActivity(View view){
+        startActivity(new Intent(MoreActivity.this,TestViewDragViewGroupActivity.class));
+    }
 }

@@ -1,22 +1,23 @@
 package com.example.administrator.on_off_button;
 
-import android.content.ComponentName;
 import android.content.Context;
-import android.content.ServiceConnection;
-import android.os.IBinder;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.ViewDragHelper;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.RelativeLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * Created by Administrator on 2016/1/14.
  */
-public class ViewDragViewGroup extends FrameLayout{
+public class ViewDragViewGroup extends FrameLayout implements View.OnClickListener {
+    private TextView mTextView;
+    private ImageView mImageView;
+
     private int width;
     private View mMainView,mMenuView;
     private ViewDragHelper mViewDragHelper;
@@ -72,6 +73,7 @@ public class ViewDragViewGroup extends FrameLayout{
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
+        Log.i("yc-flag", mViewDragHelper.shouldInterceptTouchEvent(ev) +"");
         return mViewDragHelper.shouldInterceptTouchEvent(ev);
     }
 
@@ -87,6 +89,14 @@ public class ViewDragViewGroup extends FrameLayout{
         super.onFinishInflate();
         mMenuView = getChildAt(0);
         mMainView = getChildAt(1);
+//        mTextView = (TextView) mMenuView.findViewById(R.id.tv);
+//        mImageView = (ImageView) mMenuView.findViewById(R.id.iv);
+//        mTextView.setOnClickListener(this);
+//        mImageView.setOnClickListener(this);
+    }
+
+    public View getView(int id,View parentView){
+        return parentView.findViewById(id);
     }
 
     @Override
@@ -100,6 +110,22 @@ public class ViewDragViewGroup extends FrameLayout{
 //        super.computeScroll();
         if(mViewDragHelper.continueSettling(true)){
             ViewCompat.postInvalidateOnAnimation(this);
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.tv:
+                Log.i("yc-text","click text");
+                ((TextView) v).setText("click text");
+                postInvalidate();
+                break;
+            case R.id.iv:
+                Log.i("yc-iv","click picture");
+                mTextView.setText("click picture");
+                postInvalidate();
+                break;
         }
     }
 }

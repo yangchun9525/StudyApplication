@@ -137,5 +137,19 @@
             android:onClick="toVectorAnimationActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
+        <Button
+            android:text="横向滑动"
+            android:textAllCaps="false"
+            android:onClick="toLandScrollActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="使用ViewDragHelper来滑动"
+            android:textAllCaps="false"
+            android:onClick="toTestViewDragViewGroupActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </LinearLayout>
