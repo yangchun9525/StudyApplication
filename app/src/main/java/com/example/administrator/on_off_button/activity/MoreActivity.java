@@ -86,4 +86,8 @@ public class MoreActivity extends Activity{
     public void toTestViewDragViewGroupActivity(View view){
         startActivity(new Intent(MoreActivity.this,TestViewDragViewGroupActivity.class));
     }
+
+    public void toAndroidCallJs(View view){
+        startActivity(new Intent(MoreActivity.this,AndroidCallJsActivity.class));
+    }
 }
