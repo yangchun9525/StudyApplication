@@ -90,4 +90,8 @@ public class MoreActivity extends Activity{
     public void toAndroidCallJs(View view){
         startActivity(new Intent(MoreActivity.this,AndroidCallJsActivity.class));
     }
+
+    public void toLearnJsoup(View view){
+        startActivity(new Intent(MoreActivity.this,LearnJsoupActivity.class));
+    }
 }

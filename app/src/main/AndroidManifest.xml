@@ -3,6 +3,7 @@
     package="com.example.administrator.on_off_button" >
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -48,7 +49,7 @@
         <activity android:name=".activity.TestCoordinatorActivity" android:theme="@style/AppTheme"/>
         <activity android:name=".activity.VectorAnimationActivity"/>
         <activity android:name=".activity.AndroidCallJsActivity"/>
-
+        <activity android:name=".activity.LearnJsoupActivity"/>
         <service
             android:name=".AudioService" />
     </application>
