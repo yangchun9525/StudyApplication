@@ -90,4 +90,12 @@ public class MoreActivity extends Activity{
     public void toAndroidCallJs(View view){
         startActivity(new Intent(MoreActivity.this,AndroidCallJsActivity.class));
     }
+
+    public void toHomePage(View view){
+        startActivity(new Intent(MoreActivity.this,HomePageActivity.class));
+    }
+
+    public void toTestSeekBarActivity(View view){
+        startActivity(new Intent(MoreActivity.this,TestSeekBarActivity.class));
+    }
 }

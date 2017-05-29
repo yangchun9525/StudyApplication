@@ -48,7 +48,8 @@
         <activity android:name=".activity.TestCoordinatorActivity" android:theme="@style/AppTheme"/>
         <activity android:name=".activity.VectorAnimationActivity"/>
         <activity android:name=".activity.AndroidCallJsActivity"/>
-
+        <activity android:name=".activity.HomePageActivity"/>
+        <activity android:name=".activity.TestSeekBarActivity"/>
         <service
             android:name=".AudioService" />
     </application>
